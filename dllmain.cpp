@@ -10,7 +10,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
         // We don't need to get notified in thread attach- or detachments
         DisableThreadLibraryCalls(static_cast<HMODULE>(hModule));
         CloseHandle(CreateThread(nullptr, NULL, (LPTHREAD_START_ROUTINE)MainThread, hModule, NULL, nullptr));
-        //CloseHandle(CreateThread(nullptr, NULL, (LPTHREAD_START_ROUTINE)UI::Render, hModule, NULL, nullptr));
     }
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:

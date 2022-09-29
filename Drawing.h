@@ -17,7 +17,6 @@ private:
 public:
 	static void Active();
 	static bool isActive();
-	static void Draw();
 	static void ShowWindow(); // bool*
 	static void HotKeys();
 };

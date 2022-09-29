@@ -179,8 +179,6 @@ static void showPacketList()
                     }
                 }
 
-                //ImGui::TableNextColumn();
-                //ImGui::Text("%04d", item->ID);
                 ImGui::TableNextColumn();
                 ImGui::TextUnformatted(item->Name);
                 ImGui::TableNextColumn();
@@ -193,7 +191,7 @@ static void showPacketList()
     }
 }
 
-void Drawing::ShowWindow() // bool* p_open
+void Drawing::ShowWindow()
 {
     // 確認Imgui資源都在
     IM_ASSERT(ImGui::GetCurrentContext() != NULL && "Missing dear imgui context.");
